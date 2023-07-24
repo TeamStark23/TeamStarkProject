@@ -1,0 +1,129 @@
+body{
+    background-color: #343a40;
+
+}
+.escolhaVagas{
+    width: 100vw !important;
+    height: 100vh !important;
+}
+.vagasGerais{
+    display: flex;
+    width: 100%;
+    flex: 1 1 40;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.vaga{
+    display: flex;
+    width: 100px;
+    height: 50px;
+    padding: 5px;
+    border-radius: 15px;
+    border: 2px solid #000;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.7em;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    background-color: rgb(94, 94, 94);
+}
+.painelVagas {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+.painel{
+    display: flex;
+    flex: 1;
+    padding: 15px;
+    height: 8em;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    border-radius: 10px;
+ 
+   
+}
+.painel p{
+    font-size: 2rem !important;
+    color: #fff;
+    font-weight: 700;
+}
+@media only screen and (min-width: 1291px){
+    .painel p{
+        font-size: 3rem !important;
+        color: #fff;
+        font-weight: 700;
+    }
+}
+@media only screen and (max-width: 907px){
+    .painel p{
+        font-size: 1.5rem !important;
+        color: #fff;
+        font-weight: 700;
+    }
+}
+.botaoModal{
+    display: flex;
+    flex-direction: row;
+    height: 27vh;
+    width: 100%;
+    justify-content: space-between;
+    padding: 2em 4em;
+    align-items: center;
+    margin: 5px;
+    background: linear-gradient(129deg, #FFAE00 0%, #FFCD00 30%, #FFE100 62%, #FFB900 83%) !important;
+    color: #000000!important;
+    font-weight: bold !important;
+    transition: all 0.6s;
+}
+.botaoModal:hover{
+   color: #000000!important;
+}
+.botaoModal img{
+    width: 15vw;
+    height: 15vh;
+}
+.modal-title{
+    font-size: 3em !important;
+}
+.botaoModal p{
+    font-size: 4em !important;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+@media only screen and (max-width:617px){
+    .botaoModal p{
+        font-size: 3em !important;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+     
+}
+
+/* Estilos para a barra de rolagem */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  /* Estilo para o indicador da barra de rolagem */
+  ::-webkit-scrollbar-thumb {
+    background-color: gold;
+    border-radius: 5px;
+    border: 2px solid black;
+  }
+  
+  /* Estilo para o indicador ao passar o mouse sobre a barra de rolagem */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: goldenrod;
+  }
+  
+  /* Estilo para a área de fundo da barra de rolagem */
+  ::-webkit-scrollbar-track {
+    background-color: black;
+    border: 2px solid black;
+  }

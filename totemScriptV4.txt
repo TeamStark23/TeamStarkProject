@@ -1,0 +1,75 @@
+// Objeto para armazenar o status das vagas (ocupadas ou livres)
+let vagasStatus = {};
+
+let tipoVeiculo = null;
+let tipoVeiculoValor = null;
+
+// Função para selecionar carro
+function selectCar() {
+  tipoVeiculo = 'carro';
+  tipoVeiculoValor = 2;
+}
+
+// Função para selecionar moto
+function selectMoto() {
+  tipoVeiculo = 'moto';
+  tipoVeiculoValor = 1;
+}
+
+// Função para reservar uma vaga
+function reserveVaga(numero) {
+  if (vagasStatus[numero]) {
+    // A vaga está ocupada
+    alert("Essa vaga já está ocupada!");
+  } else {
+    // A vaga está livre
+    let confirmacao = confirm("Deseja reservar a vaga?");
+    if (confirmacao) {
+      vagasStatus[numero] = {
+        tipoVeiculo: tipoVeiculo,
+        valorVeiculo: tipoVeiculoValor
+      };
+      atualizarVagas();
+    }
+  }
+}
+
+// Função para atualizar a exibição das vagas
+function atualizarVagas() {
+  let vagas = document.getElementsByClassName("vaga");
+  for (let i = 0; i < vagas.length; i++) {
+    let vaga = vagas[i];
+    let numeroVaga = i + 1;
+    let vagaStatus = vagasStatus[numeroVaga];
+    
+    if (vagaStatus) {
+      // Vaga ocupada
+      if (vagaStatus.tipoVeiculo === 'moto') {
+        vaga.style.backgroundColor = "orange";
+      } else if (vagaStatus.tipoVeiculo === 'carro') {
+        vaga.style.backgroundColor = "red";
+      }
+    } else {
+      // Vaga livre
+      vaga.style.backgroundColor = "green";
+    }
+  }
+
+  let vagasOcupadas = Object.keys(vagasStatus).length;
+  let vagasLivres = Object.keys(vagasStatus).length - vagasOcupadas;
+
+  document.getElementById("vagasOcupadas").textContent = "Vagas Ocupadas: " + vagasOcupadas;
+  document.getElementById("vagasLivres").textContent = "Vagas Livres: " + vagasLivres;
+}
+
+// Chamada inicial para atualizar as vagas
+atualizarVagas();
+
+// Função para resetar o tipo de veículo selecionado
+function resetTipoVeiculo() {
+  tipoVeiculo = null;
+  tipoVeiculoValor = null;
+}
+
+// Ouvinte de evento para redefinir o tipo de veículo ao fechar os modais
+document.getElementById("modalCarro").addEventListener("hidden.bs.modal", resetTipoVeiculo);

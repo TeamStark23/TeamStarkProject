@@ -1,0 +1,81 @@
+// Array para armazenar o status das vagas (ocupadas ou livres)
+let vagasStatus = Array(100).fill(false);
+
+// Função para selecionar carro
+function selectCar() {
+  //cont tipoVeiculo = 1;
+  //cont tipoVeiculoValor = 1;
+}
+
+// Função para selecionar moto
+function selectMoto() {
+  //cont tipoVeiculo = 0;
+  //cont tipoVeiculoValor = 0.5;
+}
+
+// Função para reservar uma vaga
+function reserveVaga(numero) {
+  if (vagasStatus[numero - 1]) {
+    // A vaga está ocupada
+    alert("Essa vaga já está ocupada!");
+  } else {
+    // A vaga está livre
+    let confirmacao = confirm("Deseja reservar a vaga?");
+    if (confirmacao) {
+      vagasStatus[numero - 1] = true;
+      atualizarVagas();
+    }
+  }
+}
+
+// Função para atualizar a exibição das vagas
+function atualizarVagas() {
+  let vagas = document.getElementsByClassName("vaga");
+  for (let i = 0; i < vagas.length; i++) {
+    let vaga = vagas[i];
+    if (vagasStatus[i]) {
+      // Vaga ocupada
+      vaga.style.backgroundColor = "red";
+    } else {
+      // Vaga livre
+      vaga.style.backgroundColor = "green";
+    }
+  }
+
+  let vagasOcupadas = vagasStatus.filter(function (status) {
+    return status;
+  }).length;
+  let vagasLivres = vagasStatus.length - vagasOcupadas;
+
+  document.getElementById("vagasOcupadas").textContent = vagasOcupadas;
+  document.getElementById("vagasLivres").textContent = vagasLivres;
+}
+
+// Chamada inicial para atualizar as vagas
+atualizarVagas();
+
+// Função para atualizar a exibição das vagas
+function atualizarVagasMoto() {
+  let vagas = document.getElementsByClassName("vaga");
+  for (let i = 0; i < vagas.length; i++) {
+    let vaga = vagas[i];
+    if (vagasStatus[i]) {
+      // Vaga ocupada
+      vaga.style.backgroundColor = "red";
+    } else {
+      // Vaga livre
+      vaga.style.backgroundColor = "green";
+    }
+  }
+
+  let vagasOcupadas = vagasStatus.filter(function (status) {
+    return status;
+  }).length;
+  let vagasLivres = vagasStatus.length - vagasOcupadas;
+
+  document.getElementById("vagasOcupadas").textContent = vagasOcupadas;
+  document.getElementById("vagasLivres").textContent = vagasLivres;
+}
+
+// Chamada inicial para atualizar as vagas
+atualizarVagasMoto();

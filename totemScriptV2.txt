@@ -1,0 +1,103 @@
+// Array para armazenar o status das vagas (ocupadas ou livres)
+let vagasStatus = Array(100).fill(0);
+
+// Função para selecionar carro
+function selectCar() {
+  tipoVeiculo = 1;
+  atualizarVagasCarro();
+}
+
+// Função para selecionar moto
+function selectMoto() {
+  tipoVeiculo = 0;
+  atualizarVagasMoto();
+}
+
+// Função para reservar uma vaga
+function reserveVaga(numero) {
+  if (vagasStatus[numero - 1] > 0) {
+    // A vaga está ocupada
+    alert("Essa vaga já está ocupada!");
+  } else {
+    // A vaga está livre
+    let confirmacao = confirm("Deseja reservar a vaga?");
+    if (confirmacao) {
+      if (vagasStatus[numero - 1] === 0) {
+        // Vaga totalmente livre, reservar para o tipo selecionado
+        if (tipoVeiculo === 0) {
+          // Moto
+          vagasStatus[numero - 1] += 0.5;
+        } else if (tipoVeiculo === 1) {
+          // Carro
+          vagasStatus[numero - 1] += 1;
+        }
+      } else {
+        // Vaga já parcialmente ocupada por moto, reservar a outra metade para moto
+        if (tipoVeiculo === 0) {
+          // Moto
+          vagasStatus[numero - 1] += 0.5;
+        } else {
+          // Carro
+          alert("Essa vaga só pode ser reservada por motos!");
+        }
+      }
+      atualizarVagas();
+    }
+  }
+}
+
+// Função para atualizar a exibição das vagas para carros
+function atualizarVagasCarro() {
+  let vagas = document.getElementsByClassName("vaga");
+  for (let i = 0; i < vagas.length; i++) {
+    let vaga = vagas[i];
+    if (vagasStatus[i] >= 0.5) {
+      // Vaga ocupada por moto ou carro
+      vaga.style.backgroundColor = "red";
+    } else {
+      // Vaga livre
+      vaga.style.backgroundColor = "green";
+    }
+  }
+
+  let vagasOcupadas = vagasStatus.filter(function (status) {
+    return status >= 0.5;
+  }).length;
+  let vagasLivres = vagasStatus.length - vagasOcupadas;
+
+  document.getElementById("vagasOcupadas").textContent = "Vagas Ocupadas: " + vagasOcupadas;
+  document.getElementById("vagasLivres").textContent = "Vagas Livres: " + vagasLivres;
+}
+
+// Função para atualizar a exibição das vagas para motos
+function atualizarVagasMoto() {
+  let vagas = document.getElementsByClassName("vaga");
+  for (let i = 0; i < vagas.length; i++) {
+    let vaga = vagas[i];
+    if (vagasStatus[i] === 1) {
+      // Vaga ocupada por carro
+      vaga.style.backgroundColor = "red";
+    } else {
+      // Vaga livre
+      vaga.style.backgroundColor = "green";
+    }
+  }
+
+  let vagasOcupadas = vagasStatus.filter(function (status) {
+    return status === 1;
+  }).length;
+  let vagasLivres = vagasStatus.length - vagasOcupadas;
+
+  document.getElementById("vagasOcupadas").textContent = "Vagas Ocupadas: " + vagasOcupadas;
+  document.getElementById("vagasLivres").textContent = "Vagas Livres: " + vagasLivres;
+}
+
+// Variáveis para controle de tipo de veículo
+let tipoVeiculo = 1; // 0 para moto, 1 para carro
+
+// Chamada inicial para atualizar as vagas
+if (tipoVeiculo === 0) {
+  atualizarVagasMoto();
+} else {
+  atualizarVagasCarro();
+}

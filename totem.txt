@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/totem.css">
+    <title>Stark Park</title>
+</head>
+
+<body>
+    <main class="flex-grow-1 flex-shrink-1 w-100">
+        <section class="container-fluid col m-0 p-5 ">
+            <section class="container-fluid row m-0 p-0">
+                <div class="escolhaVagas container-fluid">
+                    <div class="painelVagas container-fluid d-flex col">
+                        <div class="painel me-3" id="vagasTotais">Vagas Totais: 100</div>
+                        <div class="painel me-3" id="vagasOcupadas"></div>
+                        <div class="painel me-3" id="vagasLivres"></div>
+                        <div class="painel me-3" id="tipoVeiculo"></div>
+                    </div>
+                    <div class="vagasGerais">
+                        <div id="A01" class="vaga" onclick="reserveVaga(1)">A01</div>
+                        <div id="A02" class="vaga" onclick="reserveVaga(2)">A02</div>
+                        <div id="A03" class="vaga" onclick="reserveVaga(3)">A03</div>
+                        <div id="A04" class="vaga" onclick="reserveVaga(4)">A04</div>
+                        <div id="A05" class="vaga" onclick="reserveVaga(5)">A05</div>
+                        <div id="A06" class="vaga" onclick="reserveVaga(6)">A06</div>
+                        <div id="A07" class="vaga" onclick="reserveVaga(7)">A07</div>
+                        <div id="A08" class="vaga" onclick="reserveVaga(8)">A08</div>
+                        <div id="A09" class="vaga" onclick="reserveVaga(9)">A09</div>
+                        <div id="A010" class="vaga" onclick="reserveVaga(10)">A010</div>
+                        <div id="B011" class="vaga" onclick="reserveVaga(11)">B011</div>
+                        <div id="B012" class="vaga" onclick="reserveVaga(12)">B012</div>
+                        <div id="B013" class="vaga" onclick="reserveVaga(13)">B013</div>
+                        <div id="B014" class="vaga" onclick="reserveVaga(14)">B014</div>
+                        <div id="B015" class="vaga" onclick="reserveVaga(15)">B015</div>
+                        <div id="B016" class="vaga" onclick="reserveVaga(16)">B016</div>
+                        <div id="B017" class="vaga" onclick="reserveVaga(17)">B017</div>
+                        <div id="B018" class="vaga" onclick="reserveVaga(18)">B018</div>
+                        <div id="B019" class="vaga" onclick="reserveVaga(19)">B019</div>
+                        <div id="B020" class="vaga" onclick="reserveVaga(20)">B020</div>
+                        <div id="C021" class="vaga" onclick="reserveVaga(21)">C021</div>
+                        <div id="C022" class="vaga" onclick="reserveVaga(22)">C022</div>
+                        <div id="C023" class="vaga" onclick="reserveVaga(23)">C023</div>
+                        <div id="C024" class="vaga" onclick="reserveVaga(24)">C024</div>
+                        <div id="C025" class="vaga" onclick="reserveVaga(25)">C025</div>
+                        <div id="C026" class="vaga" onclick="reserveVaga(26)">C026</div>
+                        <div id="C027" class="vaga" onclick="reserveVaga(27)">C027</div>
+                        <div id="C028" class="vaga" onclick="reserveVaga(28)">C028</div>
+                        <div id="C029" class="vaga" onclick="reserveVaga(29)">C029</div>
+                        <div id="C030" class="vaga" onclick="reserveVaga(30)">C030</div>
+                        <div id="D031" class="vaga" onclick="reserveVaga(31)">D031</div>
+                        <div id="D032" class="vaga" onclick="reserveVaga(32)">D032</div>
+                        <div id="D033" class="vaga" onclick="reserveVaga(33)">D033</div>
+                        <div id="D034" class="vaga" onclick="reserveVaga(34)">D034</div>
+                        <div id="D035" class="vaga" onclick="reserveVaga(35)">D035</div>
+                        <div id="D036" class="vaga" onclick="reserveVaga(36)">D036</div>
+                        <div id="D037" class="vaga" onclick="reserveVaga(37)">D037</div>
+                        <div id="D038" class="vaga" onclick="reserveVaga(38)">D038</div>
+                        <div id="D039" class="vaga" onclick="reserveVaga(39)">D039</div>
+                        <div id="D040" class="vaga" onclick="reserveVaga(40)">D040</div>
+                        <div id="E041" class="vaga" onclick="reserveVaga(41)">E041</div>
+                        <div id="E042" class="vaga" onclick="reserveVaga(42)">E042</div>
+                        <div id="E043" class="vaga" onclick="reserveVaga(43)">E043</div>
+                        <div id="E044" class="vaga" onclick="reserveVaga(44)">E044</div>
+                        <div id="E045" class="vaga" onclick="reserveVaga(45)">E045</div>
+                        <div id="E046" class="vaga" onclick="reserveVaga(46)">E046</div>
+                        <div id="E047" class="vaga" onclick="reserveVaga(47)">E047</div>
+                        <div id="E048" class="vaga" onclick="reserveVaga(48)">E048</div>
+                        <div id="E049" class="vaga" onclick="reserveVaga(49)">E049</div>
+                        <div id="E050" class="vaga" onclick="reserveVaga(50)">E050</div>
+                        <div id="F051" class="vaga" onclick="reserveVaga(51)">F051</div>
+                        <div id="F052" class="vaga" onclick="reserveVaga(52)">F052</div>
+                        <div id="F053" class="vaga" onclick="reserveVaga(53)">F053</div>
+                        <div id="F054" class="vaga" onclick="reserveVaga(54)">F054</div>
+                        <div id="F055" class="vaga" onclick="reserveVaga(55)">F055</div>
+                        <div id="F056" class="vaga" onclick="reserveVaga(56)">F056</div>
+                        <div id="F057" class="vaga" onclick="reserveVaga(57)">F057</div>
+                        <div id="F058" class="vaga" onclick="reserveVaga(58)">F058</div>
+                        <div id="F059" class="vaga" onclick="reserveVaga(59)">F059</div>
+                        <div id="F060" class="vaga" onclick="reserveVaga(60)">F060</div>
+                        <div id="G061" class="vaga" onclick="reserveVaga(61)">G061</div>
+                        <div id="G062" class="vaga" onclick="reserveVaga(62)">G062</div>
+                        <div id="G063" class="vaga" onclick="reserveVaga(63)">G063</div>
+                        <div id="G064" class="vaga" onclick="reserveVaga(64)">G064</div>
+                        <div id="G065" class="vaga" onclick="reserveVaga(65)">G065</div>
+                        <div id="G066" class="vaga" onclick="reserveVaga(66)">G066</div>
+                        <div id="G067" class="vaga" onclick="reserveVaga(67)">G067</div>
+                        <div id="G068" class="vaga" onclick="reserveVaga(68)">G068</div>
+                        <div id="G069" class="vaga" onclick="reserveVaga(69)">G069</div>
+                        <div id="G070" class="vaga" onclick="reserveVaga(70)">G070</div>
+                        <div id="H071" class="vaga" onclick="reserveVaga(71)">H071</div>
+                        <div id="H072" class="vaga" onclick="reserveVaga(72)">H072</div>
+                        <div id="H073" class="vaga" onclick="reserveVaga(73)">H073</div>
+                        <div id="H074" class="vaga" onclick="reserveVaga(74)">H074</div>
+                        <div id="H075" class="vaga" onclick="reserveVaga(75)">H075</div>
+                        <div id="H076" class="vaga" onclick="reserveVaga(76)">H076</div>
+                        <div id="H077" class="vaga" onclick="reserveVaga(77)">H077</div>
+                        <div id="H078" class="vaga" onclick="reserveVaga(78)">H078</div>
+                        <div id="H079" class="vaga" onclick="reserveVaga(79)">H079</div>
+                        <div id="H080" class="vaga" onclick="reserveVaga(80)">H080</div>
+                        <div id="I081" class="vaga" onclick="reserveVaga(81)">I081</div>
+                        <div id="I082" class="vaga" onclick="reserveVaga(82)">I082</div>
+                        <div id="I083" class="vaga" onclick="reserveVaga(83)">I083</div>
+                        <div id="I084" class="vaga" onclick="reserveVaga(84)">I084</div>
+                        <div id="I085" class="vaga" onclick="reserveVaga(85)">I085</div>
+                        <div id="I086" class="vaga" onclick="reserveVaga(86)">I086</div>
+                        <div id="I087" class="vaga" onclick="reserveVaga(87)">I087</div>
+                        <div id="I088" class="vaga" onclick="reserveVaga(88)">I088</div>
+                        <div id="I089" class="vaga" onclick="reserveVaga(89)">I089</div>
+                        <div id="I090" class="vaga" onclick="reserveVaga(90)">I090</div>
+                        <div id="J091" class="vaga" onclick="reserveVaga(91)">J091</div>
+                        <div id="J092" class="vaga" onclick="reserveVaga(92)">J092</div>
+                        <div id="J093" class="vaga" onclick="reserveVaga(93)">J093</div>
+                        <div id="J094" class="vaga" onclick="reserveVaga(94)">J094</div>
+                        <div id="J095" class="vaga" onclick="reserveVaga(95)">J095</div>
+                        <div id="J096" class="vaga" onclick="reserveVaga(96)">J096</div>
+                        <div id="J097" class="vaga" onclick="reserveVaga(97)">J097</div>
+                        <div id="J098" class="vaga" onclick="reserveVaga(98)">J098</div>
+                        <div id="J099" class="vaga" onclick="reserveVaga(99)">J099</div>
+                        <div id="J0100" class="vaga" onclick="reserveVaga(100)">J0100</div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="JAVASCRIPT/totem.js"></script>
+</body>
+
+</html>

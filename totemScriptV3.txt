@@ -1,0 +1,73 @@
+// Array para armazenar o status das vagas (ocupadas ou livres)
+let vagasStatus = Array(100).fill(0);
+let tipoVeiculo = null;
+let tipoVeiculoValor = null;
+
+// Função para selecionar carro
+function selectCar() {
+  tipoVeiculo = 1;
+  tipoVeiculoValor = 2;
+}
+
+// Função para selecionar moto
+function selectMoto() {
+  tipoVeiculo = 0;
+  tipoVeiculoValor = 1;
+}
+
+// Função para reservar uma vaga
+function reserveVaga(numero) {
+  if (vagasStatus[numero - 1] > 0) {
+    // A vaga está ocupada
+    alert("Essa vaga já está ocupada!" );
+  } else {
+    // A vaga está livre
+    let confirmacao = confirm("Deseja reservar a vaga?");
+    if (confirmacao) {
+      vagasStatus[numero - 1] = tipoVeiculoValor;
+      atualizarVagas();
+      close
+    }
+  }
+}
+
+// Função para atualizar a exibição das vagas
+function atualizarVagas() {
+  let vagas = document.getElementsByClassName("vaga");
+  for (let i = 0; i < vagas.length; i++) {
+    let vaga = vagas[i];
+    if (vagasStatus[i] > 0) {
+      // Vaga ocupada
+      if (tipoVeiculo === 0) {
+        // Moto
+        vaga.style.backgroundColor = "orange";
+      } else {
+        // Carro
+        vaga.style.backgroundColor = "red";
+      }
+    } else {
+      // Vaga livre
+      vaga.style.backgroundColor = "green";
+    }
+  }
+
+  let vagasOcupadas = vagasStatus.filter(function (status) {
+    return status > 0;
+  }).length;
+  let vagasLivres = vagasStatus.length - vagasOcupadas;
+
+  document.getElementById("vagasOcupadas").textContent = "Vagas Ocupadas: " + vagasOcupadas;
+  document.getElementById("vagasLivres").textContent = "Vagas Livres: " + vagasLivres;
+}
+
+// Chamada inicial para atualizar as vagas
+atualizarVagas();
+
+// Função para resetar o tipo de veículo selecionado
+function resetTipoVeiculo() {
+  tipoVeiculo = null;
+  tipoVeiculoValor = null;
+}
+
+// Ouvinte de evento para redefinir o tipo de veículo ao fechar os modais
+document.getElementById("modalCarro").addEventListener("hidden.bs.modal", resetTipoVeiculo);
