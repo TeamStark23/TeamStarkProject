@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sidebars/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="CSS/cadastroUsuarios.css">
+    <title>Stark Park</title>
+</head>
+
+<body>
+
+    <body class="d-flex m-0 p-0" data-bs-theme="dark">
+        <header class="">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol id="home" viewBox="0 0 16 16">
+                    <path
+                        d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z">
+                    </path>
+                </symbol>
+                <symbol id="speedometer2" viewBox="0 0 16 16">
+                    <path
+                        d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z">
+                    </path>
+                    <path fill-rule="evenodd"
+                        d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z">
+                    </path>
+                </symbol>
+                <symbol id="table" viewBox="0 0 16 16">
+                    <path
+                        d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z">
+                    </path>
+                </symbol>
+                <symbol id="people-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+                    <path fill-rule="evenodd"
+                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z">
+                    </path>
+                </symbol>
+                <symbol id="grid" viewBox="0 0 16 16">
+                    <path
+                        d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z">
+                    </path>
+                </symbol>
+            </svg>
+            <div class="sidebar  d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary"
+                style="width: 225px; height: 100%; min-height: 100vh;">
+                <a href="homePage.html"
+                    class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-light  text-decoration-none">
+                    <img lass="bi pe-none me-2" src="COMPONENTES/logo/logo-stark-branco-v1.2.png" alt=""
+                        style="height: auto; width: 60px;">
+                    <span class="fs-4">Stark Park</span>
+                </a>
+                <hr>
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item mt-3 align-content-center align-items-center" title="Home">
+                        <a href="homePage.html" class="nav-link  link-light fw-bold" aria-current="page">
+                            <svg class="bi pe-none me-2" width="16" height="16">
+                                <use xlink:href="#home"></use>
+                            </svg>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mt-3 align-content-center align-items-center" title="Dashboard">
+                        <a href="dashbord.html" class="nav-link link-light  fw-bold">
+                            <svg class="bi pe-none me-2" width="16" height="16">
+                                <use xlink:href="#speedometer2"></use>
+                            </svg>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mt-3 align-content-center align-items-center" title="Monitoramento">
+                        <a href="monitoramento.html" class="nav-link link-light  fw-bold">
+                            <svg class="bi pe-none me-2" width="16" height="16">
+                                <use xlink:href="#table"></use>
+                            </svg>
+                            <span>Monitoramento</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mt-3 align-content-center align-items-center" title="Totem">
+                        <a href="totem.html" class="nav-link link-light  fw-bold">
+                            <svg class="bi pe-none me-2" width="16" height="16">
+                                <use xlink:href="#grid"></use>
+                            </svg>
+                            <span>Totem</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="dropdown position-relative bottom-0 mb-3 z-3">
+                    <a href="#" class="d-flex align-items-center link-light  text-decoration-none dropdown-toggle"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://github.com/mdo.png" alt="" width="32" height="32"
+                            class="profile-image rounded-circle me-2 object-fit-cover">
+                        <span class="fw-bold">ADMIN</span>
+                    </a>
+                    <ul class="dropdown-menu text-small shadow">
+                        <li><a class="dropdown-item active link-dark" href="cadastroUsuarios.html">Usuarios</a></li>
+                        <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="index.html">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary position-absolute top-0 w-100 d-none">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-brand dropdown position-relative">
+                    <a href="#" class="d-flex align-items-center link-light  text-decoration-none dropdown-toggle"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://github.com/mdo.png" alt="" width="32" height="32"
+                            class="profile-image rounded-circle me-3 z-3 object-fit-cover">
+                        <span class="fs-5">ADMIN</span>
+                    </a>
+                    <ul class="dropdown-menu text-small shadow z-3">
+                        <li><a class="dropdown-item active link-dark" href="cadastroUsuarios.html">Usuarios</a></li>
+                        <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="index.html">Sign out</a></li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse m-0 p-0" id="navbarTogglerDemo03">
+                    <ul
+                        class="navBar nav nav-pills flex-column d-flex position-absolute gap-1 p-3 z-3 mt-2 bg-dark rounded-2">
+                        <li class="nav-item mt-3 align-content-center align-items-center" title="Home">
+                            <a href="homePage.html" class="nav-link  link-dark  active fw-bold" aria-current="page">
+                                <svg class="bi pe-none me-2" width="16" height="16">
+                                    <use xlink:href="#home"></use>
+                                </svg>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mt-3 align-content-center align-items-center" title="Dashboard">
+                            <a href="dashbord.html" class="nav-link link-light  fw-bold">
+                                <svg class="bi pe-none me-2" width="16" height="16">
+                                    <use xlink:href="#speedometer2"></use>
+                                </svg>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mt-3 align-content-center align-items-center" title="Monitoramento">
+                            <a href="monitoramento.html" class="nav-link link-light  fw-bold">
+                                <svg class="bi pe-none me-2" width="16" height="16">
+                                    <use xlink:href="#table"></use>
+                                </svg>
+                                <span>Monitoramento</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mt-3 align-content-center align-items-center" title="Totem">
+                            <a href="totem.html" class="nav-link link-light  fw-bold">
+                                <svg class="bi pe-none me-2" width="16" height="16">
+                                    <use xlink:href="#grid"></use>
+                                </svg>
+                                <span>Totem</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="main container-lg mt-5">
+            <div class="container mt-5 ">
+                <div class="border rounded m-0 mb-3">
+                    <h1 class="p-2">Formulário de Cadastro</h1>
+                    <form class="bg-body-secondary p-3 " id="cadastroForm">
+                        <div class="row gx-4 mb-4">
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="inputFirstName">Nome</label>
+                                <input
+                                    class="form-control d-inline-flex focus-ring focus-ring-warning py-1 px-2 text-decoration-none border rounded-2"
+                                    id="inputFirstName" type="text" placeholder="Nome" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="small mb-1" for="inputLastName">Sobrenome</label>
+                                <input
+                                    class="form-control d-inline-flex focus-ring focus-ring-warning py-1 px-2 text-decoration-none border rounded-2"
+                                    id="inputLastName" type="text" placeholder="Sobrenome" required>
+                            </div>
+                        </div>
+                        <div class="row gx-4 mb-4">
+                            <div class="col-12 col-md-6">
+                                <label class="small mb-1" for="cpf">CPF</label>
+                                <input
+                                    class="form-control d-inline-flex focus-ring focus-ring-warning py-1 px-2 text-decoration-none border rounded-2"
+                                    id="cpf" type="text" placeholder="000.000.000-00" maxlength="14" required>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="small mb-1" for="inputBirthday">Data de Nascimento</label>
+                                <input
+                                    class="form-control d-inline-flex focus-ring focus-ring-warning py-1 px-2 text-decoration-none border rounded-2"
+                                    id="inputBirthday" type="text" placeholder="00/00/0000" required>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="small mb-1" for="Registro">Registro</label>
+                                <input
+                                    class="form-control d-inline-flex focus-ring focus-ring-warning py-1 px-2 text-decoration-none border rounded-2"
+                                    id="Registro" type="text" placeholder="xxxxx-xxxxx-xxxxx-xxxxx-xxxxx" minlength="25"
+                                    maxlength="25" required>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="small mb-1" for="inputEmailAddress">E-mail</label>
+                            <input
+                                class="form-control d-inline-flex focus-ring focus-ring-warning py-1 px-2 text-decoration-none border rounded-2"
+                                id="inputEmailAddress" type="email" placeholder="exemplo@address.com" required>
+                        </div>
+                        <div class="row gx-3 mb-3">
+                            <div class="col-12 col-md-6">
+                                <label class="small mb-1" for="inputPhone">Número de telefone</label>
+                                <input
+                                    class="form-control d-inline-flex focus-ring focus-ring-warning py-1 px-2 text-decoration-none border rounded-2"
+                                    id="inputPhone" type="tel" placeholder="(00) 0-0000-0000" required>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="small mb-1" for="inputLocation">Endereço</label>
+                                <input
+                                    class="form-control d-inline-flex focus-ring focus-ring-warning py-1 px-2 text-decoration-none border rounded-2"
+                                    id="inputLocation" type="text" placeholder="Endereço" required>
+                            </div>
+                            <div class="col-12 col-md-6 mt-2">
+                                <label class="small mb-1" for="inputPassword">Senha</label>
+                                <input
+                                    class="form-control d-inline-flex focus-ring focus-ring-warning py-1 px-2 text-decoration-none border rounded-2"
+                                    id="inputPassword" type="password" placeholder="Senha" required>
+                            </div>
+                            <div class="col-12 col-md-6 mt-2">
+                                <label class="small mb-1" for="inputConfirPassword">Confirma Senha</label>
+                                <input
+                                    class="form-control d-inline-flex focus-ring focus-ring-warning py-1 px-2 text-decoration-none border rounded-2"
+                                    id="inputConfirPassword" type="password" placeholder="Confirma Senha" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-warning fw-bolder mb-3">Salvar</button>
+                    </form>
+                </div>
+                <h2>Lista de Usuários Cadastrados</h2>
+                <div class="table-responsive bg-body-tertiary p-1 rounded border">
+                    <table class="table table-dark table-hover table-striped border-warning m-0 ">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Sobrenome</th>
+                                <th>CPF</th>
+                                <th>Registro</th>
+                                <th>E-mail</th>
+                                <th>Número de Telefone</th>
+                            </tr>
+                        </thead>
+                        <tbody id="listaUsuarios">
+                            <tr>
+                                <td>João</td>
+                                <td>Silva</td>
+                                <td>123.456.789-00</td>
+                                <td>123456</td>
+                                <td>joao.silva@example.com</td>
+                                <td>(11) 98765-4321</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="JAVASCRIPT/img-profile.js"></script>
+        <script src="JAVASCRIPT/cadastroUsuarios.js"></script>
+
+
+    </body>
+
+</html>

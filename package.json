@@ -1,0 +1,11 @@
+{
+  "name": "prototipostarkpark",
+  "version": "1.0.0",
+  "description": "projeto integrado do Stark Team, Stark Park",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marcos Henrique, Mayara Carvalho, Bruno Freitas, Iago Alves",
+  "license": "MIT"
+}

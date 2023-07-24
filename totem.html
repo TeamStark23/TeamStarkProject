@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/totem.css">
+    <title>Stark Park</title>
+</head>
+
+<body data-bs-theme="dark">
+    <main class="flex-grow-1 flex-shrink-1 w-100 " data-bs-theme="dark">
+        <section class="container-fluid col m-0 p-0 ">
+            <section class="container-fluid row m-0 p-0 ">
+                <div class="painelVagas mt-2 justify-content-between">
+                    <div class="painel">
+                        <p id="vagasTotais">Vagas Totais: 100</p>
+                    </div>
+                    <div class="painel">
+                        <p id="vagasOcupadas"></p>
+                    </div>
+                    <div class="painel ">
+                        <p id="vagasLivres"></p>
+                    </div>
+                </div>
+                <div class="principal">
+                    <button type="button" class="botaoModal btn" data-bs-toggle="modal" data-bs-target="#modalVagas"
+                        onclick="selectCar()"><img src="COMPONENTES/1299198.svg" alt="Carro">
+                        <p>Carro</p>
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade modal-full" id="modalVagas" data-bs-backdrop="static"
+                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalVagasLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-fullscreen">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title"  id="modalVagasLabel">Carros</h1>
+                                    <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"
+                                        onclick="resetTipoVeiculo()"></button>
+                                </div>
+                                <div class="modal-body d-flex gap-5 bg-body-secondary">
+                                    <div class="row border p-2 m-1 rounded-2 bg-dark-subtle" style="min-height: 710px; min-width: 120px;">
+                                        <span class="fs-3 fw-bold">Setor - A</span>
+                                        <div class="col d-flex flex-wrap mb-5 justify-content-center ">
+                                            <div id="A01" class="vaga" onclick="reserveVaga(1)">A01</div>
+                                            <div id="A02" class="vaga" onclick="reserveVaga(2)">A02</div>
+                                            <div id="A03" class="vaga" onclick="reserveVaga(3)">A03</div>
+                                            <div id="A04" class="vaga" onclick="reserveVaga(4)">A04</div>
+                                            <div id="A05" class="vaga" onclick="reserveVaga(5)">A05</div>
+                                            <div id="A06" class="vaga" onclick="reserveVaga(6)">A06</div>
+                                            <div id="A07" class="vaga" onclick="reserveVaga(7)">A07</div>
+                                            <div id="A08" class="vaga" onclick="reserveVaga(8)">A08</div>
+                                            <div id="A09" class="vaga" onclick="reserveVaga(9)">A09</div>
+                                            <div id="A010" class="vaga" onclick="reserveVaga(10)">A10</div>
+                                        </div>
+                                    </div>
+                                    <div class="row border p-2 m-1 rounded-2 bg-dark-subtle" style="min-height: 710px; min-width: 120px;">
+                                        <span class="fs-3 fw-bold">Setor - B</span>
+                                        <div class="col d-flex flex-wrap mb-5 justify-content-center ">
+                                            <div id="B011" class="vaga" onclick="reserveVaga(11)">B01</div>
+                                            <div id="B012" class="vaga" onclick="reserveVaga(12)">B02</div>
+                                            <div id="B013" class="vaga" onclick="reserveVaga(13)">B03</div>
+                                            <div id="B014" class="vaga" onclick="reserveVaga(14)">B04</div>
+                                            <div id="B015" class="vaga" onclick="reserveVaga(15)">B05</div>
+                                            <div id="B016" class="vaga" onclick="reserveVaga(16)">B06</div>
+                                            <div id="B017" class="vaga" onclick="reserveVaga(17)">B07</div>
+                                            <div id="B018" class="vaga" onclick="reserveVaga(18)">B08</div>
+                                            <div id="B019" class="vaga" onclick="reserveVaga(19)">B09</div>
+                                            <div id="B020" class="vaga" onclick="reserveVaga(20)">B10</div>
+                                        </div>
+                                    </div>
+                                    <div class="row border p-2 m-1 rounded-2 bg-dark-subtle" style="min-height: 710px; min-width: 120px;">
+                                        <span class="fs-3 fw-bold">Setor - C</span>
+                                        <div class="col d-flex flex-wrap mb-5 justify-content-center ">
+                                            <div id="C021" class="vaga" onclick="reserveVaga(21)">C01</div>
+                                            <div id="C022" class="vaga" onclick="reserveVaga(22)">C02</div>
+                                            <div id="C023" class="vaga" onclick="reserveVaga(23)">C03</div>
+                                            <div id="C024" class="vaga" onclick="reserveVaga(24)">C04</div>
+                                            <div id="C025" class="vaga" onclick="reserveVaga(25)">C05</div>
+                                            <div id="C026" class="vaga" onclick="reserveVaga(26)">C06</div>
+                                            <div id="C027" class="vaga" onclick="reserveVaga(27)">C07</div>
+                                            <div id="C028" class="vaga" onclick="reserveVaga(28)">C08</div>
+                                            <div id="C029" class="vaga" onclick="reserveVaga(29)">C09</div>
+                                            <div id="C030" class="vaga" onclick="reserveVaga(30)">C10</div>
+                                        </div>
+                                    </div>
+                                    <div class="row border p-2 m-1 rounded-2 bg-dark-subtle" style="min-height: 710px; min-width: 120px;">
+                                        <span class="fs-3 fw-bold">Setor - D</span>
+                                        <div class="col d-flex flex-wrap mb-5 justify-content-center ">
+                                            <div id="D031" class="vaga" onclick="reserveVaga(31)">D01</div>
+                                            <div id="D032" class="vaga" onclick="reserveVaga(32)">D02</div>
+                                            <div id="D033" class="vaga" onclick="reserveVaga(33)">D03</div>
+                                            <div id="D034" class="vaga" onclick="reserveVaga(34)">D04</div>
+                                            <div id="D035" class="vaga" onclick="reserveVaga(35)">D05</div>
+                                            <div id="D036" class="vaga" onclick="reserveVaga(36)">D06</div>
+                                            <div id="D037" class="vaga" onclick="reserveVaga(37)">D07</div>
+                                            <div id="D038" class="vaga" onclick="reserveVaga(38)">D08</div>
+                                            <div id="D039" class="vaga" onclick="reserveVaga(39)">D09</div>
+                                            <div id="D040" class="vaga" onclick="reserveVaga(40)">D10</div>
+                                        </div>
+                                    </div>
+                                    <div class="row border p-2 m-1 rounded-2 bg-dark-subtle" style="min-height: 710px; min-width: 120px;">
+                                        <span class="fs-3 fw-bold">Setor - E</span>
+                                        <div class="col d-flex flex-wrap mb-5 justify-content-center ">
+                                            <div id="E041" class="vaga" onclick="reserveVaga(41)">E01</div>
+                                            <div id="E042" class="vaga" onclick="reserveVaga(42)">E02</div>
+                                            <div id="E043" class="vaga" onclick="reserveVaga(43)">E03</div>
+                                            <div id="E044" class="vaga" onclick="reserveVaga(44)">E04</div>
+                                            <div id="E045" class="vaga" onclick="reserveVaga(45)">E05</div>
+                                            <div id="E046" class="vaga" onclick="reserveVaga(46)">E06</div>
+                                            <div id="E047" class="vaga" onclick="reserveVaga(47)">E07</div>
+                                            <div id="E048" class="vaga" onclick="reserveVaga(48)">E08</div>
+                                            <div id="E049" class="vaga" onclick="reserveVaga(49)">E09</div>
+                                            <div id="E050" class="vaga" onclick="reserveVaga(50)">E10</div>
+                                        </div>
+                                    </div>
+                                    <div class="row border p-2 m-1 rounded-2 bg-dark-subtle" style="min-height: 710px; min-width: 120px;">
+                                        <span class="fs-3 fw-bold">Setor - F</span>
+                                        <div class="col d-flex flex-wrap mb-5 justify-content-center ">
+                                            <div id="F051" class="vaga" onclick="reserveVaga(51)">F01</div>
+                                            <div id="F052" class="vaga" onclick="reserveVaga(52)">F02</div>
+                                            <div id="F053" class="vaga" onclick="reserveVaga(53)">F03</div>
+                                            <div id="F054" class="vaga" onclick="reserveVaga(54)">F04</div>
+                                            <div id="F055" class="vaga" onclick="reserveVaga(55)">F05</div>
+                                            <div id="F056" class="vaga" onclick="reserveVaga(56)">F06</div>
+                                            <div id="F057" class="vaga" onclick="reserveVaga(57)">F07</div>
+                                            <div id="F058" class="vaga" onclick="reserveVaga(58)">F08</div>
+                                            <div id="F059" class="vaga" onclick="reserveVaga(59)">F09</div>
+                                            <div id="F060" class="vaga" onclick="reserveVaga(60)">F10</div>
+                                        </div>
+                                    </div>
+                                    <div class="row border p-2 m-1 rounded-2 bg-dark-subtle" style="min-height: 710px; min-width: 120px;">
+                                        <span class="fs-3 fw-bold">Setor - G</span>
+                                        <div class="col d-flex flex-wrap mb-5 justify-content-center ">
+                                            <div id="G061" class="vaga" onclick="reserveVaga(61)">G01</div>
+                                            <div id="G062" class="vaga" onclick="reserveVaga(62)">G02</div>
+                                            <div id="G063" class="vaga" onclick="reserveVaga(63)">G03</div>
+                                            <div id="G064" class="vaga" onclick="reserveVaga(64)">G04</div>
+                                            <div id="G065" class="vaga" onclick="reserveVaga(65)">G05</div>
+                                            <div id="G066" class="vaga" onclick="reserveVaga(66)">G06</div>
+                                            <div id="G067" class="vaga" onclick="reserveVaga(67)">G07</div>
+                                            <div id="G068" class="vaga" onclick="reserveVaga(68)">G08</div>
+                                            <div id="G069" class="vaga" onclick="reserveVaga(69)">G09</div>
+                                            <div id="G070" class="vaga" onclick="reserveVaga(70)">G10</div>
+                                        </div>
+                                    </div>
+                                    <div class="row border p-2 m-1 rounded-2 bg-dark-subtle" style="min-height: 710px; min-width: 120px;">
+                                        <span class="fs-3 fw-bold">Setor - H</span>
+                                        <div class="col d-flex flex-wrap mb-5 justify-content-center ">
+                                            <div id="H071" class="vaga" onclick="reserveVaga(71)">H01</div>
+                                            <div id="H072" class="vaga" onclick="reserveVaga(72)">H02</div>
+                                            <div id="H073" class="vaga" onclick="reserveVaga(73)">H03</div>
+                                            <div id="H074" class="vaga" onclick="reserveVaga(74)">H04</div>
+                                            <div id="H075" class="vaga" onclick="reserveVaga(75)">H05</div>
+                                            <div id="H076" class="vaga" onclick="reserveVaga(76)">H06</div>
+                                            <div id="H077" class="vaga" onclick="reserveVaga(77)">H07</div>
+                                            <div id="H078" class="vaga" onclick="reserveVaga(78)">H08</div>
+                                            <div id="H079" class="vaga" onclick="reserveVaga(79)">H09</div>
+                                            <div id="H080" class="vaga" onclick="reserveVaga(80)">H10</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer justify-content-between">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <label for="livresColorInput" class="form-label fs-3 fw-bold">Livres:</label>
+                                        <input type="color" class="form-control form-control-color"
+                                            id="livresColorInput" value="#156800" title="green" disabled>
+                                        <label for="ocupadoColorInput" class="form-label fs-3 fw-bold">Ocupados:</label>
+                                        <input type="color" class="form-control form-control-color"
+                                            id="ocupadoColorInput" value="#a00000" title="red" disabled>
+                                    </div>
+                                    <button type="button" class="btn btn-warning fw-bolder fs-3" data-bs-dismiss="modal"
+                                        onclick="resetTipoVeiculo()">Voltar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="botaoModal btn" data-bs-toggle="modal" data-bs-target="#modalVagasMoto"
+                        onclick="selectMoto()"><img src="COMPONENTES/39131.svg" alt="Moto">
+                        <p>Moto</p>
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade modal-full" id="modalVagasMoto" data-bs-backdrop="static"
+                        data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalVagasMoto" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="modalVagasMotoLabel">Motos</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                        onclick="resetTipoVeiculo()"></button>
+                                </div>
+                                <div class="modal-body bg-body-secondary">
+                                    <div class="row border p-2 m-1 rounded-2 bg-dark-subtle">
+                                        <span class="fs-3 fw-bold">Setor - I</span>
+                                        <div class="row d-flex flex-wrap mb-2 justify-content-between">
+                                            <div id="I01" class="vaga" onclick="reserveVaga(81)">I01</div>
+                                            <div id="I02" class="vaga" onclick="reserveVaga(82)">I02</div>
+                                            <div id="I03" class="vaga" onclick="reserveVaga(83)">I03</div>
+                                            <div id="I04" class="vaga" onclick="reserveVaga(84)">I04</div>
+                                            <div id="I05" class="vaga" onclick="reserveVaga(85)">I05</div>
+                                            <div id="I06" class="vaga" onclick="reserveVaga(86)">I06</div>
+                                            <div id="I07" class="vaga" onclick="reserveVaga(87)">I07</div>
+                                            <div id="I08" class="vaga" onclick="reserveVaga(88)">I08</div>
+                                            <div id="I09" class="vaga" onclick="reserveVaga(89)">I09</div>
+                                            <div id="I10" class="vaga" onclick="reserveVaga(90)">I10</div>
+                                        </div>
+                                    </div>
+                                    <div class="row border p-2 m-1 rounded-2 bg-dark-subtle">
+                                        <span class="fs-3 fw-bold">Setor - J</span>
+                                        <div class="row d-flex flex-wrap mb-2 justify-content-between">
+                                            <div id="J01" class="vaga" onclick="reserveVaga(91)">J01</div>
+                                            <div id="J02" class="vaga" onclick="reserveVaga(92)">J02</div>
+                                            <div id="J03" class="vaga" onclick="reserveVaga(93)">J03</div>
+                                            <div id="J04" class="vaga" onclick="reserveVaga(94)">J04</div>
+                                            <div id="J05" class="vaga" onclick="reserveVaga(95)">J05</div>
+                                            <div id="J06" class="vaga" onclick="reserveVaga(96)">J06</div>
+                                            <div id="J07" class="vaga" onclick="reserveVaga(97)">J07</div>
+                                            <div id="J08" class="vaga" onclick="reserveVaga(98)">J08</div>
+                                            <div id="J09" class="vaga" onclick="reserveVaga(99)">J09</div>
+                                            <div id="J10" class="vaga" onclick="reserveVaga(100)">J010</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer justify-content-between">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <label for="livresColorInput" class="form-label fs-3 fw-bold">Livres:</label>
+                                        <input type="color" class="form-control form-control-color"
+                                            id="livresColorInput" value="#156800" title="green" disabled>
+                                        <label for="ocupadoColorInput"
+                                            class="form-label fs-3 fw-bold">Semiocupada:</label>
+                                        <input type="color" class="form-control form-control-color"
+                                            id="ocupadoColorInput" value="#ffa600" title="red" disabled>
+                                        <label for="ocupadoColorInput" class="form-label fs-3 fw-bold">Ocupados:</label>
+                                        <input type="color" class="form-control form-control-color"
+                                            id="ocupadoColorInput" value="#a00000" title="red" disabled>
+                                    </div>
+                                    <button type="button" class="btn btn-warning fw-bolder fs-3" data-bs-dismiss="modal"
+                                        onclick="resetTipoVeiculo()">Voltar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="botaoModal btn" data-bs-toggle="modal" data-bs-target="#modalUber">
+                        <img src="COMPONENTES/Uber.svg" alt="Uber">
+                        <p>Veículos de Aplicativos</p>
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="modalUber" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="modalUberLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl modal-dialog-centered">
+                            <div class="modal-content ">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="modalUberLabel">Motorista de Aplicativo</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                                        onclick="resetTipoVeiculo()"></button>
+                                </div>
+                                <div class="modal-body fs-3 fw-bold">
+                                    Você terá 15 minutos para sair ou pagará uma taxa adicional!
+                                </div>
+                                <div class="modal-footer justify-content-between">
+                                    <button type="button" class="btn btn-secondary fw-bolder fs-3" data-bs-dismiss="modal"
+                                        onclick="resetTipoVeiculo()">Voltar</button>
+                                    <button type="button" class="btn btn-warning fw-bolder fs-3" data-bs-dismiss="modal"
+                                        onclick="">Continuar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="JAVASCRIPT/totem.js"></script>
+</body>
+
+</html>
