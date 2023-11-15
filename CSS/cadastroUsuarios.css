@@ -89,13 +89,13 @@
 }
 
 .active {
-    background: linear-gradient(129deg, #FFAE00 0%, #FFCD00 30%, #FFE100 62%, #FFB900 83%) !important;
+    background: linear-gradient(45deg, #FFAE00 0%, #FFCD00 30%, #FFE100 70%, #FFB900 100%) !important;
     color: #000 !important;
     font-weight: bold !important;
 }
 
 .dropdown-item:active {
-    background: linear-gradient(129deg, #949494 0%, #b6b6b6 30%, #FFE100 62%, #FFB900 83%) !important;
+    background: linear-gradient(45deg, #FFAE00 0%, #FFCD00 30%, #FFE100 70%, #FFB900 100%) !important;
     color: #000 !important;
     font-weight: bold !important;
 }

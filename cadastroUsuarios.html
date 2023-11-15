@@ -56,7 +56,7 @@
                 style="width: 225px; height: 100%; min-height: 100vh;">
                 <a href="homePage.html"
                     class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-light  text-decoration-none">
-                    <img lass="bi pe-none me-2" src="COMPONENTES/logo/logo-stark-branco-v1.2.png" alt=""
+                    <img lass="bi pe-none me-2" src="COMPONENTES/logo/logo-stark-branco-v1.2.svg" alt=""
                         style="height: auto; width: 60px;">
                     <span class="fs-4">Stark Park</span>
                 </a>
@@ -206,13 +206,13 @@
                                 <label class="small mb-1" for="inputBirthday">Data de Nascimento</label>
                                 <input
                                     class="form-control d-inline-flex focus-ring focus-ring-warning py-1 px-2 text-decoration-none border rounded-2"
-                                    id="inputBirthday" type="text" placeholder="00/00/0000" required>
+                                    id="inputBirthday" type="date" placeholder="00/00/0000" required>
                             </div>
-                            <div class="col-12 col-md-6">
-                                <label class="small mb-1" for="Registro">Registro</label>
+                            <div class="col-12 col-md-6 mt-2">
+                                <label class="small mb-1 " for="Registro">Registro</label>
                                 <input
                                     class="form-control d-inline-flex focus-ring focus-ring-warning py-1 px-2 text-decoration-none border rounded-2"
-                                    id="Registro" type="text" placeholder="xxxxx-xxxxx-xxxxx-xxxxx-xxxxx" minlength="25"
+                                    id="Registro" type="text" placeholder="Informe o registro do funcionario" minlength="25"
                                     maxlength="25" required>
                             </div>
                         </div>
@@ -259,9 +259,10 @@
                                 <th>Nome</th>
                                 <th>Sobrenome</th>
                                 <th>CPF</th>
-                                <th>Registro</th>
+                                <th>Data de Cadastro</th>
                                 <th>E-mail</th>
                                 <th>Número de Telefone</th>
+                                <th>Excluir</th>
                             </tr>
                         </thead>
                         <tbody id="listaUsuarios">
@@ -269,17 +270,16 @@
                                 <td>João</td>
                                 <td>Silva</td>
                                 <td>123.456.789-00</td>
-                                <td>123456</td>
+                                <td>16/11/2023</td>
                                 <td>joao.silva@example.com</td>
                                 <td>(11) 98765-4321</td>
+                                <td><button class="btn btn-warning">X</button></td>
                             </tr>
-                        </tbody>
-                    </table>
+                        </tbody>                  
+                    </table>            
                 </div>
-
             </div>
         </div>
-
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
