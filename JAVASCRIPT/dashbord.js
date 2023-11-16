@@ -102,8 +102,7 @@ document.getElementById("botao3").addEventListener("click", function () {
 
 criarGrafico(painel, dados1, dados2);
 
-// Grafico Pizza
-let labels = ["vagas livres", "vagas ocupadas"];
+
 
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -138,6 +137,9 @@ data8 = normalizeArray(data8);
 data9 = normalizeArray(data9);
 data10 = normalizeArray(data10);
 
+// Grafico Pizza
+let labels = [" vagas livres", " vagas ocupadas"];
+
 function criarGraficoPizza(containerId, canvasId, labels, data) {
   let canvas = document.getElementById(canvasId);
   let ctx = canvas.getContext("2d");
@@ -149,35 +151,44 @@ function criarGraficoPizza(containerId, canvasId, labels, data) {
       datasets: [{
         data: data,
         backgroundColor: ["rgb(196, 160, 0, 0.5)", "rgb(195, 195, 195, 0.5)"]
-        
       }]
     },
     options: {
       plugins: {
         legend: {
           align: "start",
-          color: "rgb(196, 160, 0, 0.5)"
+          labels: {
+            color: "white", // Define a cor dos rótulos como branco
+            usePointStyle: true, // Permite a customização de pontos (necessário para ajustar o tamanho)
+            boxWidth: 10 // Ajusta a largura do ponto (símbolo)
+          }
         },
         tooltip: {
           callbacks: {
             label: function (context) {
-              let label = context.label || "";
-
-              if (label) {
-                label += ": ";
-              }
-
               let value = context.formattedValue;
               value = value.replace(/%/g, ""); // Remove o '%' do valor
               value = parseFloat(value).toFixed(0); // Formata para duas casas decimais
               value += "%"; // Adiciona o '%' novamente
 
-              return label + value;
+              return " " + value;
             }
           }
+        },
+        datalabels: {
+          align: "center",
+          color: 'rgb(255, 255, 255, 0.8)',
+          font: {
+            size: 18
+          },
+          formatter: (value) => {
+            return value.toFixed(0) + "%"; // Adiciona o símbolo de '%' ao valor
+          }
         }
-      }
-    }
+      },
+      events: [] // Desativa a interatividade do hover
+    },
+    plugins: [ChartDataLabels] // Adiciona o plugin datalabels como parte dos plugins do Chart.js
   });
 }
 

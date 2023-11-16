@@ -13,6 +13,7 @@
     <link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
     <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
     <link rel="stylesheet" href="CSS/dashbord.css">
     <title>Stark Park</title>
 </head>
@@ -175,13 +176,15 @@
             <div class="container-fluid">
                 <div class="container-fluid mt-4">
 
-                    <div class="container bg-body-secondary p-3 rounded border">
+                    <div class="container-lg bg-body-secondary p-3 rounded border">
                         <h2 class="text-bg-dark rounded-2 text-center">Controle de Veiculos</h2>
                         <hr>
-                        <button id="botao1" type="button" class="btn btn-outline-warning">Diário</button>
-                        <button id="botao2" type="button" class="btn btn-outline-warning">Semanal</button>
-                        <button id="botao3" type="button" class="btn btn-outline-warning">Mês</button>
-                        <canvas id="Canvas" class="col-1"></canvas>
+                        <div class="w-100 d-flex justify-content-center gap-2">
+                            <button id="botao1" type="button" class="btn btn-outline-warning">Diário</button>
+                            <button id="botao2" type="button" class="btn btn-outline-warning">Semanal</button>
+                            <button id="botao3" type="button" class="btn btn-outline-warning">Mês</button>
+                        </div>
+                        <canvas id="Canvas" class=""></canvas>
                     </div>
 
 
